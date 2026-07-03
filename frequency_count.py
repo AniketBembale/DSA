@@ -1,38 +1,21 @@
+# def freq_Count(n):
+#     freq_hash = {}
 
-# def count(first_string, second_string):
-#     count_occurrences = 0
-
-#     for i in range(len(first_string) - len(second_string) + 1):
-#         if first_string[i:i + len(second_string)] == second_string:
-#             count_occurrences += 1
-
-#     return count_occurrences
-
-# print(count('abcdefg', 'def'))
-
-
-
-def count_occurence(first_string,second_string):
-    occurence = 0
-
-    for i in range(len(first_string)-len(second_string)):
-        if first_string[i:i+len(second_string)]==second_string:
-            occurence+=1
-    return occurence
-print(count_occurence('abcdecg', 'def'))
+#     for i in range(0,len(n)):
+#         if n[i] in freq_hash:
+#             freq_hash[n[i]] += 1
+#         else:
+#             freq_hash[n[i]]=1
+#     return freq_hash
+# print(freq_Count([1,1,2,2,4,5,6,7,7]))
 
 
 
+def freq_Count(list1):
+    freq_hash = {}
+    n = len(list1)
 
-
-
-
-
-def count_occurence(first_string,second_string):
-    occurence = 0
-    for i in range(len(first_string)-len(second_string)):
-        if first_string[i:i+len(second_string)] == second_string:
-            occurence +=1
-    return occurence
-
-print(count_occurence('abcdecg', 'dec'))
+    for i in range(0,n):
+        freq_hash[list1[i]] = freq_hash.get(list1[i],0)+1
+    return freq_hash
+print(freq_Count([1,1,2,2,4,5,6,7,7]))
